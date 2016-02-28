@@ -90,11 +90,17 @@
 		text-align: center;
 		}
 
-		#graphmaker {
-		color: #FFFF00;
-		margin-left:500px;
+		#graphmaker1 {
+		color: #008000;
+		margin-left:300px;
 	
 		}
+		#graphmaker2 {
+		color: #FF0000;
+		margin-left:300px;
+	
+		}
+		
 
 		.h3-aligner {
 		margin-left:500px;
@@ -245,7 +251,8 @@
 		<font size="7" face="segoe ui light" color="#FF0080">Graph:</font>
 		
 		</div>	
-			<p id="graphmaker"></p>
+			<p id="graphmaker1"></p>
+			<p id="graphmaker2"></p>
 		<div class="css-typing">
 		
 		
@@ -333,6 +340,7 @@
           e.style.display = 'none';
        else
           e.style.display = 'block';
+	
 		}
 		function submit() 
 		{
@@ -404,7 +412,8 @@
 			}
 			var i=document.getElementById('i');
 			i.innerHTML=total+" milligrams of caffeine consumed"+"."+"<br>"+advice;
-			var graph=document.getElementById('graphmaker');
+			var graph=document.getElementById('graphmaker1');
+			var bottomgraph=document.getElementById('graphmaker2');
 			var length=Math.round(total/50);
 			var length1=Math.round(limit/50);
 			var bar="";
@@ -417,7 +426,8 @@
 			{
 				bar1=bar1+"X";
 			}
-			graph.innerHTML=("|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>");;
+			graph.innerHTML=("|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>");
+			bottomgraph.innerHTML=("<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>");
 		}
 		</script>	
 	</body>	
