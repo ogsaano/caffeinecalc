@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+    <title>Spartahack 2016 Project</title>
+	<link rel="stylesheet" type="text/css" href="caffeine calculator.css"/>
+	<body text="#ffffff">
+		<img src='http://rs723.pbsrc.com/albums/ww238/Indoah/Heartbeat.gif~c200' style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:-1;'>
+		<h1 class="css-typing" style="text-align:center; color:#00BFFF"><font face="segoe ui light">Had a late study night? 
+		Consumed a lot of caffeine? 
+		Can't sleep? 
+		<br>
+		If you're worried about your recent caffiene consumption, this is the place to go. <br>
+		Simply enter in the number of fluid ounces of each drink you consumed and your age. <br> This site will tell you if you should be worried or not.</font></h1>
+		
+		<style>
+		.css-typing
+		{
+			width: 40em;
+			white-space:nowrap;
+			overflow:hidden;
+			-webkit-animation: type 3s steps(50, end);
+			animation: type 3s steps(50, end);
+		}
+
+		@keyframes type{
+		from { width: 0; }
+		}
+
+		@-webkit-keyframes type{
+			from { width: 0; }
+		}
+		
+		</style>
+		<br>
+		
+		<div class="css-typing">
+		<h3><font face="segoe ui light" color="#00BFFF">On the graph, each X is 50 milligrams of caffeine. <br> The top side of the graph is the safe caffeine limit for your age range. <br> The bottom side of the graph is what you consumed.</h3></font>
+		
+		
+		<font size="7" face="segoe ui light" color="#FF0080">Sodas:</font>
+		<a href="#" onclick="toggle_visibility('hiddensodas');"><input class="sweet" type="button" value="Expand/Collapse"></a>
+		
+		
+		<div id="hiddensodas" style="display:none;">
+		<br>
+		<font size="5" face="segoe ui light" color="#40FF00">Coca-Cola: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces1" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		<br><br><br><br>
+		
+		<font size="5" face="segoe ui light" color="#40FF00">Mountain Dew: </font>
+		&nbsp;&nbsp;&nbsp;
+	    <input class="textbox" type="text" id="ounces" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		<br><br><br><br>
+	
+		
+		<font size="5" face="segoe ui light" color="#40FF00">Pepsi: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces2" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		</div>
+		<br><br><br><br>
+		
+		<font size="7" face="segoe ui light" color="#FF0080">Coffees:</font>
+		<a href="#" onclick="toggle_visibility('hiddencoffees');"><input class="sweet" type="button" value="Expand/Collapse"></a>
+		<div id="hiddencoffees" style="display:none;">
+		<br>
+		<font size="5" face="segoe ui light" color="#40FF00">Black Coffee: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces3" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		<br><br><br><br>
+		
+		<font size="5" face="segoe ui light" color="#40FF00">Double-Shot Cappuccino: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces8" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		<br><br><br><br>
+		
+		<font size="5" face="segoe ui light" color="#40FF00">K-Cup (Brewed): </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces9" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		<br><br><br><br>
+		</div>
+		
+		<br><br><br><br>
+		<font size="7" face="segoe ui light" color="#FF0080">Graph:</font>
+		
+		</div>	
+			<p id="graphmaker"></p>
+		<div class="css-typing">
+		
+		
+		<br><br><br><br>
+		<font size="7" face="segoe ui light" color="#FF0080">Energy Drinks:</font>
+		<a href="#" onclick="toggle_visibility('hiddenenergy');"><input class="sweet" type="button" value="Expand/Collapse"></a>
+		<div id="hiddenenergy" style="display:none;">
+		<br>
+		<font size="5" face="segoe ui light" color="#40FF00">5 Hour Energy: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces7" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		<br><br><br><br>
+		
+		<font size="5" face="segoe ui light" color="#40FF00">Monster: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces6" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		<br><br><br><br>
+		
+		<font size="5" face="segoe ui light" color="#40FF00">Red Bull: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces5" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		<br><br><br><br>
+		
+		
+		<font size="5" face="segoe ui light" color="#40FF00">Rockstar: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces4" value="0">
+		<font size="3" face="verdana" color="#58ACFA">ounces</font>
+		
+		
+		</div>
+		<br><br><br><br>
+		
+	
+		<font size="7" face="segoe ui light" color="#FF0080">Other:</font>&nbsp;
+		<input class="textbox" type="text" id="ounces10" value="0" style="height:20px;width:40px;">
+		<font size="3" face="verdana" color="#58ACFA">mg/fl. oz.</font>&nbsp;&nbsp;&nbsp;
+		<input class="textbox" type="text" id="ounces11" value="0" style="height:20px;width:40px;">
+		<font size="3" face="verdana" color="#58ACFA">fl. oz. consumed</font>
+		<br>
+		<font size="5" face="segoe ui light" color="#40FF00">(Use this if you can't find your drink in the preset list.)</font>
+		<br><br><br><br>
+		<font size="6" face="ariel" color="#FF0000">Age: </font>
+		&nbsp;&nbsp;&nbsp;
+		<input class="textbox1" type="text" id="age1" value="0">
+		<font size="3" face="verdana" color="#FE9A2E">years</font>
+		</div>
+		</div>
+		
+		<br><br><br><br>
+		 
+
+ 
+		<style>
+		.textbox {
+			border: 2px solid rgb(173, 204, 204);
+			font-family: "Verdana", sans-serif;
+			font-style: oblique;
+   
+			box-shadow: 0 0 50px rgb(255, 128, 0) inset;
+			transition: 500ms all ease;
+			padding: 3px 3px 3px 3px;
+		}
+		
+		.textbox1 {
+			border: 2px solid rgb(173, 204, 204);
+			font-family: "Verdana", sans-serif;
+			font-style: oblique;
+			
+			box-shadow: 0 0 50px rgb(88, 172, 250) inset;
+			transition: 500ms all ease;
+			padding: 3px 3px 3px 3px;
+		}
+
+
+
+
+		</style> 
+
+		
+		
+		
+			
+		
+		<br><br><br>
+		<input class="submitting" type="button" value="Submit" onclick="submit()">
+		<p id="i"></p>
+		
+		
+		<a href="#" onclick="toggle_visibility('hiddenbib');"><input class="submitting1" type="button" value="About Us/This Website"></a>
+		<div id="hiddenbib" style="display:none;">
+			<div class="format"><font size="3" face="segoe ui light" color="#66ffcc">Created By: Saano M., Joe S., Manav R., Swap K., with an honorable mention to Jeff R.<br><a href="https://docs.google.com/document/d/1y4FyLqqBUoctVLwIQ17qvgG-xaj7H2jX_m4cf-A80p0/edit?usp=sharing">Bibliography</a><br>Contact us at kaltooris17@okemosk12.net.</font></div>
+		</div>
+		
+			
+		
+		
+		<style>
+		.submitting{
+			background: #FAAC58;
+			border-radius: 15px;
+			padding: 10px 20px;
+			display: block;
+			font-family: arial;
+			font-weight: bold;
+			color:#000000;
+			margin:0 auto;
+			text-decoration: none;
+			text-shadow:0px 1px 0px #fff;
+			border:1px solid #a7a7a7;
+			width: 145px;
+        
+			box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+			-webkit-transition:box-shadow 0.5s;
+		}
+		.submitting i{
+			float: right;
+       
+		}
+		.submitting:hover{
+			box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+		}
+		.submitting:active{
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px blue, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+			background:-webkit-linear-gradient(top, #d1d1d1 0%,#00ffff 100%);
+		}
+		
+		.submitting1{
+			background: #0099ff;
+			border-radius: 15px;
+			padding: 10px 20px;
+			display: block;
+			font-family: arial;
+			font-weight: bold;
+			color:#000000;
+			margin:0 auto;
+			text-decoration: none;
+			text-shadow:0px 1px 0px #fff;
+			border:1px solid #a7a7a7;
+			width: 200px;
+        
+			box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+			-webkit-transition:box-shadow 0.5s;
+		}
+		.submitting1 i{
+			float: right;
+       
+		}
+		.submitting1:hover{
+			box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+		}
+		.submitting1:active{
+			box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px blue, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+			background:-webkit-linear-gradient(top, #d1d1d1 0%,#FAAC58 100%);
+		}
+		</style>
+		<br><br><br>
+		<p id="i"></p>
+		<script>
+		
+		function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+		}
+		function submit() 
+		{
+			var dewounces=document.getElementById('ounces').value;
+			var cokeounces=document.getElementById('ounces1').value;
+			var pepsiounces=document.getElementById('ounces2').value;
+			var monsterounces=document.getElementById('ounces3').value;
+			var rockstarounces=document.getElementById('ounces4').value;
+			var redbullounces=document.getElementById('ounces5').value;
+			var coffeeounces=document.getElementById('ounces6').value;
+			var fivehourounces=document.getElementById('ounces7').value;
+			var espressoounces=document.getElementById('ounces8').value;
+			var kcupounces=document.getElementById('ounces9').value;
+			var otherounces=document.getElementById('ounces11').value;
+			var otherconcent=document.getElementById('ounces10').value;
+			var age=document.getElementById('age1').value;
+			dewounces=parseFloat(dewounces);
+			cokeounces=parseFloat(cokeounces);
+			pepsiounces=parseFloat(pepsiounces);
+			monsterounces=parseFloat(monsterounces);
+			rockstarounces=parseFloat(rockstarounces);
+			redbullounces=parseFloat(redbullounces);
+			coffeeounces=parseFloat(coffeeounces);
+			fivehourounces=parseFloat(fivehourounces);
+			espressoounces=parseFloat(espressoounces);
+			kcupounces=parseFloat(kcupounces);
+			age=parseFloat(age);
+
+			var total=0;
+			total=(cokeounces*2.83)+(dewounces*4.5)+(pepsiounces*3.2)+(monsterounces*10)+(rockstarounces*10)+(redbullounces*9.5)+(coffeeounces*12.5)+
+			(fivehourounces*100)+(espressoounces*12.83)+(kcupounces*15)+(otherounces*otherconcent);
+			total=Math.floor(total);
+			var advice = "";
+			var limit=0;
+			if(age<12)
+			{
+				if(total>limit)
+				{
+					advice="Caffeine isn't recommended for children under 12. While researchers have said that 45 milligrams in one sitting is okay on occasion, a child should not consume this much on a regular basis.";
+				}
+				else
+				{
+					advice="Good, children under 12 shouldn't consume caffeine at all.";
+				}
+			}
+			if(age>=12 && age<18)
+			{
+				limit=100;
+				if(total>limit)
+				{
+					advice="According to researchers, teenagers can ingest up to 100 milligrams of caffeine a day with little to no harmful side effects. Going over this limit increases your risk of bodily dysfunction, most notably in the heart.";
+				}
+				else
+				{
+					advice="You are below the researchers' limit of 100mg of caffeine.";
+				}
+			}
+			if(age>=18)
+			{
+				limit=300;
+				if(total>limit)
+				{
+					advice="Adults are not recommended to consume over 300 milligrams of caffeine in a short period of time. Excess caffeine can accelerate deterioriation of the liver and heart as well as disrupt sleep patterns, which can lead to more problems down the line.";
+				}
+				else
+				{
+					advice="You are within the 'safe limit' of 300 milligrams of caffeine for an adult.";
+				}
+			}
+			var i=document.getElementById('i');
+			i.innerHTML=total+" milligrams of caffeine consumed"+"."+"<br>"+advice;
+			var graph=document.getElementById('graphmaker');
+			var length=Math.round(total/50);
+			var length1=Math.round(limit/50);
+			var bar="";
+			var bar1="";
+			for(var i=0; i<length; i++)
+			{
+				bar=bar+"X";
+			}
+			for(var j=0; j<length1; j++)
+			{
+				bar1=bar1+"X";
+			}
+			graph.innerHTML=("|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"<br>|"+bar1+"_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>|"+bar+"<br>");;
+		}
+		</script>	
+	</body>	
+</html>
